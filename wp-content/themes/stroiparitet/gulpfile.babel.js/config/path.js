@@ -32,8 +32,8 @@ export default {
 	},
 
 	fonts	: {
-		src		: pathSrc + '/fonts/**/*.{eot,ttf,otfotc,ttc,woff,woff2,svg}',
-		watch	: pathSrc + '/fonts/**/*.{eot,ttf,otfotc,ttc,woff,woff2,svg}',
+		src		: pathSrc + '/fonts/**/*',
+		watch	: pathSrc + '/fonts/**/*',
 		dest	: pathDest + '/fonts'
 	},
 
