@@ -1,0 +1,78 @@
+.hero {
+	&-inner {
+		position: relative;
+		padding: 120px 0
+	}
+
+	&-title {
+		color: $white;
+		margin-bottom: 30px;
+		text-shadow: $shadow-title
+	}
+
+	&-desc {
+		font-size: 24px;
+		font-weight: $fw-bold;
+		background-image: $grad-violet;
+		color: transparent;
+		background-clip: text
+	}
+}
+
+.timer {
+	margin-bottom: 30px;
+
+	& > div {
+		position: relative;
+		width: 60px;
+		font-size: 28px;
+		font-weight: $fw-bold;
+		color: $white;
+		padding: 10px 0 20px;
+		margin-right: 10px;
+		text-align: center;
+		background-color: $black;
+
+		@media (min-width: $md) {
+			width: 102px;
+			font-size: 36px;
+			padding: 20px 0 30px;
+			margin-right: 30px
+		}
+
+		&:last-child {
+			margin-right: 0
+		}
+
+		&::after {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: $fs-xs;
+			font-weight: $fw-regular;
+			color: $gray;
+
+			@media (min-width: $md) {
+				bottom: 20px;
+				font-size: $fs-sm
+			}
+		}
+	}
+
+	.days::after {
+		content: 'Дней'
+	}
+
+	.hours::after {
+		content: 'Часов'
+	}
+
+	.minutes::after {
+		content: 'Минут'
+	}
+
+	.seconds::after {
+		content: 'Секунд'
+	}
+}

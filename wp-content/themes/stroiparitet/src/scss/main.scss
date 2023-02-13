@@ -1,8 +1,10 @@
 // Defaults styles.
 @import 'components/fonts';
 @import 'components/vars';
+@import 'components/helpers';
 @import 'components/typography';
 @import 'components/grid';
+@import 'components/buttons';
 
 // Theme base styles.
 @import 'components/base';
@@ -15,5 +17,5 @@
 @import 'footer/footer';
 @import 'footer/menu';
 
-// Other styles. Please headline each group of your custom styles, for example:
-// ACF Flexible content styles.
+// Sections.
+@import 'sections/hero_section';
