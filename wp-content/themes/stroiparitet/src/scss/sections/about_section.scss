@@ -1,0 +1,49 @@
+.about {
+	padding: 40px 0;
+
+	@media (min-width: $md) {
+		padding: 75px 0
+	}
+
+	&-logo {
+		position: relative;
+		width: 100%;
+		height: 85vw;
+		font-size: 10vw;
+		line-height: $lh-title;
+		font-weight: $fw-bold;
+		background: $grad-violet;
+		margin-bottom: 30px;
+		z-index: 0;
+
+		@media (min-width: $sm) {
+			max-width: 500px;
+			height: 500px;
+			font-size: 60px
+		}
+
+		@media (min-width: $lg) {
+			margin: 0
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			width: calc(100% - 50px);
+			height: calc(100% - 50px);
+			background-color: $white;
+			z-index: -1
+		}
+	}
+
+	&-info {
+		width: 100%;
+
+		@media (min-width: $lg) {
+			width: calc(100% - 500px);
+			padding-left: 130px
+		}
+	}
+}

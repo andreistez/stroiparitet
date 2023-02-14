@@ -7,22 +7,22 @@ h6, .h6 {
 	font-family: $ff-title;
 	font-weight: $fw-bold;
 	line-height: $lh-title;
-	margin: 0 0 1rem
+	margin: 0 0 30px
 }
 
 h1, .h1 {
 	font-size: 48px;
 
-	@media all and (min-width: $lg) {
+	@media (min-width: $lg) {
 		font-size: 64px
 	}
 }
 
 h2, .h2 {
-	font-size: 24px;
+	font-size: 32px;
 
-	@media all and (min-width: $lg) {
-		font-size: 32px
+	@media (min-width: $lg) {
+		font-size: 48px
 	}
 }
 
@@ -33,7 +33,7 @@ h3, .h3 {
 h4, .h4 {
 	font-size: $fs-xl;
 
-	@media all and (min-width: $lg) {
+	@media (min-width: $lg) {
 		font-size: 24px
 	}
 }
@@ -66,4 +66,8 @@ p {
 
 b, strong {
 	font-weight: $fw-bold
+}
+
+.section-title {
+	text-align: center
 }

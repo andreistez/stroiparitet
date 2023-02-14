@@ -23,6 +23,18 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					get_template_part( 'template-parts/sections/hero_section/hero_section', null, [ 'section' => $section ] );
 					break;
 
+				case 'info_section':
+					get_template_part( 'template-parts/sections/info_section/info_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'about_section':
+					get_template_part( 'template-parts/sections/about_section/about_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'products_section':
+					get_template_part( 'template-parts/sections/products_section/products_section', null, [ 'section' => $section ] );
+					break;
+
 				default:
 					esc_html_e( 'Шаблон секции не найден.', THEME_NAME );
 			}

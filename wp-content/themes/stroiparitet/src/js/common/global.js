@@ -1,6 +1,7 @@
 export const WINDOW_WIDTH_XL = 1200
 
-let windowWidth	= window.innerWidth
+let windowWidth	= window.innerWidth,
+	targetElement
 
 /**
  * Scroll document to top.
@@ -69,6 +70,27 @@ export const scrollToElem = ( elementSelector, ignoreHeaderHeight = false ) => {
  * @returns {Number}	windowWidth	Window inner width value.
  */
 export const getWindowWidth = () => windowWidth
+
+/**
+ * Set variable for disableScrollLock.
+ *
+ * @param	{String}	elementId	Specific element ID.
+ * @returns	{Boolean}				True if element is set, false if not.
+ */
+export const setTargetElement = elementId => {
+	targetElement = document.querySelector( elementId )
+
+	if( ! targetElement ) return false
+
+	return true
+}
+
+/**
+ * Get element for disableScrollLock.
+ *
+ * @returns targetElement value.
+ */
+export const getTargetElement = () => targetElement
 
 /**
  * Window on resize event.

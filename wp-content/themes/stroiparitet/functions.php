@@ -49,8 +49,8 @@ function critick_init_theme(): void
 	// Custom image sizes.
 	 add_image_size( 'full-hd', 1920 );
 	 add_image_size( 'sp_icon', 0, 100 );
+	 add_image_size( 'sp_info', 60, 60 );
 	 add_image_size( 'sp_vertical', 300, 400 );
-	 add_image_size( 'sp_avatar', 120, 120 );
 	 add_image_size( 'sp_avatar', 120, 120 );
 	 add_image_size( 'sp_blog', 400, 335 );
 }

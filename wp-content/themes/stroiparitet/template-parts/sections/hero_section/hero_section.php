@@ -56,7 +56,7 @@ if( ! $title && ! $desc ) return;
 			}
 			?>
 
-			<button class="btn red">
+			<button class="btn red open-modal">
 				<?php printf( esc_html__( '%s', THEME_NAME ), $button_label ) ?>
 			</button>
 		</div><!-- .hero-inner -->

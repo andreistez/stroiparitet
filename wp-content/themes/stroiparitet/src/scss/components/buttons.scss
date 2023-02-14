@@ -39,4 +39,20 @@
 			background: $grad-red-reverse
 		}
 	}
+
+	&.no-bg {
+		min-height: auto;
+		background: transparent;
+		padding: 0;
+		color: $accent-alt;
+		transition: color ease-out $tr;
+
+		&::before {
+			display: none
+		}
+
+		&:hover {
+			color: $accent
+		}
+	}
 }

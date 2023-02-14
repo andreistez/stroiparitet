@@ -5,6 +5,7 @@
 @import 'components/typography';
 @import 'components/grid';
 @import 'components/buttons';
+@import 'components/forms';
 
 // Theme base styles.
 @import 'components/base';
@@ -15,7 +16,10 @@
 
 // Footer styles.
 @import 'footer/footer';
-@import 'footer/menu';
+@import 'footer/modal';
 
 // Sections.
 @import 'sections/hero_section';
+@import 'sections/info_section';
+@import 'sections/about_section';
+@import 'sections/products_section';

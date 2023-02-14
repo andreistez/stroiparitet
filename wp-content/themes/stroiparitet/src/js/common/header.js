@@ -1,5 +1,11 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
-import { getWindowWidth, WINDOW_WIDTH_XL, scrollToElem } from './global'
+import {
+	WINDOW_WIDTH_XL,
+	getWindowWidth,
+	scrollToElem,
+	setTargetElement,
+	getTargetElement
+} from './global'
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	'use strict'
@@ -10,15 +16,14 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	if( window.scrollY > 0 ) document.querySelector( '.header' ).classList.add( 'scrolled' )
 } )
 
-let allowScroll,
-	header,
+let header,
 	isMenuOpened = false
 
 const toggleMobileMenu = () => {
 	header = document.querySelector( '.header' )
 	const menuBtn = header.querySelector( '.menu-btn' )
 
-	allowScroll	= document.querySelector( '#header-menu-inner' )
+	setTargetElement( '#header-menu-inner' )
 
 	if( ! header || ! menuBtn ) return
 
@@ -27,12 +32,12 @@ const toggleMobileMenu = () => {
 
 const menuBtnClick = () => {
 	if( ! header.classList.contains( 'active' ) ){
-		disableBodyScroll( allowScroll, { reserveScrollBarGap: true } )
+		disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
 		header.classList.add( 'active' )
 		isMenuOpened = true
 	}	else {
 		header.classList.remove( 'active' )
-		enableBodyScroll( allowScroll )
+		enableBodyScroll( getTargetElement() )
 		isMenuOpened = false
 	}
 }
@@ -78,8 +83,8 @@ window.addEventListener( 'scroll', () => {
 
 window.addEventListener( 'resize', () => {
 	if( getWindowWidth() >= WINDOW_WIDTH_XL ){
-		if( isMenuOpened ) enableBodyScroll( allowScroll )
+		if( isMenuOpened ) enableBodyScroll( getTargetElement() )
 	}	else {
-		if( isMenuOpened ) disableBodyScroll( allowScroll, { reserveScrollBarGap: true } )
+		if( isMenuOpened ) disableBodyScroll( getTargetElement(), { reserveScrollBarGap: true } )
 	}
 } )

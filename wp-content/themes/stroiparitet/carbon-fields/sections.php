@@ -49,10 +49,7 @@ Container::make( 'post_meta', __( 'Поля контента', THEME_NAME ) )
 
 			// Products section.
 			->add_fields( 'products_section', __( 'Продукция', THEME_NAME ), [
-				Field::make( 'text', 'title', __( 'Заголовок', THEME_NAME ) )
-					->set_width( 50 ),
-				Field::make( 'text', 'button_label', __( 'Текст на кнопке', THEME_NAME ) )
-					->set_width( 50 ),
+				Field::make( 'text', 'title', __( 'Заголовок', THEME_NAME ) ),
 				Field::make( 'complex', 'products', __( 'Товары', THEME_NAME ) )
 					->set_layout( 'tabbed-horizontal' )
 					->add_fields( [
