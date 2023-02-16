@@ -1,4 +1,6 @@
-export const WINDOW_WIDTH_XL = 1200
+export const
+	WINDOW_WIDTH_XL	= 1200,
+	ajaxUrl			= window.wpData.ajaxUrl
 
 let windowWidth	= window.innerWidth,
 	targetElement
@@ -91,6 +93,21 @@ export const setTargetElement = elementId => {
  * @returns targetElement value.
  */
 export const getTargetElement = () => targetElement
+
+/**
+ * Custom AJAX request.
+ *
+ * @param	{Object}	formData	Data for fetch body.
+ * @returns	{Array}					Response data array.
+ */
+export let ajaxRequest = async formData => {
+	let response = await fetch( ajaxUrl, {
+		method	: 'post',
+		body	: formData
+	} )
+
+	return await response.json()
+}
 
 /**
  * Window on resize event.

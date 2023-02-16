@@ -1,6 +1,14 @@
 form {
 	position: relative;
-	text-align: center
+	text-align: center;
+
+	&.success .note {
+		color: $success
+	}
+
+	&.error .note {
+		color: $error
+	}
 }
 
 legend {
@@ -50,4 +58,10 @@ textarea {
 	height: 80px;
 	padding-top: 10px;
 	resize: none
+}
+
+.note:not(:empty) {
+	font-size: $fs-xl;
+	font-weight: $fw-bold;
+	margin-top: 30px
 }

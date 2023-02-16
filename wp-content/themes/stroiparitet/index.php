@@ -35,6 +35,22 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					get_template_part( 'template-parts/sections/products_section/products_section', null, [ 'section' => $section ] );
 					break;
 
+				case 'steps_section':
+					get_template_part( 'template-parts/sections/steps_section/steps_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'certificates_section':
+					get_template_part( 'template-parts/sections/certificates_section/certificates_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'testimonials_section':
+					get_template_part( 'template-parts/sections/testimonials_section/testimonials_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'news_section':
+					get_template_part( 'template-parts/sections/news_section/news_section', null, [ 'section' => $section ] );
+					break;
+
 				default:
 					esc_html_e( 'Шаблон секции не найден.', THEME_NAME );
 			}

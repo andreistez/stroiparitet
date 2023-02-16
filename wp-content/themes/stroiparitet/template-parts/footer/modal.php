@@ -29,11 +29,15 @@
 				<label for="text">
 					<textarea id="text" name="text" placeholder="<?php esc_html_e( 'Сообщение *', THEME_NAME ) ?>"></textarea>
 				</label>
+
+				<?php wp_nonce_field( 'sp_ajax_send_form', 'sp_send_form_nonce' ) ?>
 			</fieldset>
 
 			<button class="btn"><?php esc_html_e( 'Отправить', THEME_NAME ) ?></button>
 
 			<div class="modal-close"></div>
+
+			<div class="note"></div>
 		</form>
 	</div>
 </div>

@@ -1,0 +1,57 @@
+.steps {
+	padding: 40px 0;
+
+	@media (min-width: $md) {
+		padding: 75px 0
+	}
+
+	&-inner {
+		margin: 0 -12px;
+
+		@media (min-width: $sm) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: center
+		}
+	}
+}
+
+.step {
+	width: 100%;
+	padding: 0 12px;
+	margin-top: 30px;
+
+	&:first-child {
+		margin-top: 0
+	}
+
+	@media (min-width: $sm) {
+		width: 50%;
+
+		&:nth-child(2) {
+			margin-top: 0
+		}
+	}
+
+	@media (min-width: $lg) {
+		width: calc(100% / 3);
+
+		&:nth-child(3) {
+			margin-top: 0
+		}
+	}
+
+	img {
+		height: 100%;
+		width: auto;
+		margin-bottom: 30px
+	}
+
+	h4 {
+		text-align: center
+	}
+
+	p {
+		text-align: center
+	}
+}

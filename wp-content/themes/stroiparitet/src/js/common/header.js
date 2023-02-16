@@ -69,15 +69,24 @@ const scrollFromHeaderMenu = () => {
 }
 
 window.addEventListener( 'scroll', () => {
-	const scrolled	= window.scrollY
+	const
+		scrolled	= window.scrollY,
+		wrapper		= document.querySelector( '.wrapper' )
+
 	header = document.querySelector( '.header' )
 
-	if( ! header ) return
+	if( ! header || ! wrapper ) return
 
-	if( scrolled ){
-		if( ! header.classList.contains( 'scrolled' ) ) header.classList.add( 'scrolled' )
+	if( scrolled > 500 ){
+		if( ! header.classList.contains( 'scrolled' ) ){
+			wrapper.style.paddingTop = `${ header.offsetHeight }px`
+			header.classList.add( 'scrolled' )
+		}
 	}	else {
-		if( header.classList.contains( 'scrolled' ) ) header.classList.remove( 'scrolled' )
+		if( header.classList.contains( 'scrolled' ) ){
+			header.classList.remove( 'scrolled' )
+			wrapper.style.paddingTop = '0'
+		}
 	}
 } )
 

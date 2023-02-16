@@ -4,13 +4,13 @@ $sm	: 480px;
 $md	: 768px;
 $lg	: 992px;
 $lg2: 1100px;
-$xl	: 1200px;
+$xl	: 1366px;
 $xxl: 1550px;
 
 // Container max-width.
 $container-md: 760px;
 $container-lg: 990px;
-$container-xl: 1200px;
+$container-xl: 1344px;
 
 // Container padding.
 $container-padding: 24px;
@@ -43,6 +43,8 @@ $gray		: #717171;
 $light		: #DDDDDD;
 $accent		: #7C6AFA;
 $accent-alt	: #DF5950;
+$success	: #71cc33;
+$error		: #ff3e3e;
 
 // Gradients.
 $grad-violet		: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);

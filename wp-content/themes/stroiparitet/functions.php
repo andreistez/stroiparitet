@@ -31,6 +31,7 @@ function critick_load_theme_dependencies(): void
 
 	// Please place all custom functions declarations in this file.
 	require_once( 'theme-functions/theme-functions.php' );
+	require_once( 'theme-functions/theme-ajax-functions.php' );
 }
 
 add_action( 'init', 'critick_init_theme' );
@@ -73,5 +74,15 @@ function critick_inclusion_enqueue(): void
 
 	// Scripts.
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/static/js/main.min.js', [], THEME_VERSION, true );
+}
+
+add_action( 'wp_head', 'sp_js_vars_for_frontend' );
+/**
+ * JS variables for frontend, such as AJAX URL.
+ */
+function sp_js_vars_for_frontend(): void
+{
+	$variables = ['ajaxUrl' => admin_url( 'admin-ajax.php' )];
+	echo '<script type="text/javascript">window.wpData = ' . json_encode( $variables ) . ';</script>';
 }
 

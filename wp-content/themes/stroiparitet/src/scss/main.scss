@@ -1,3 +1,5 @@
+@import '../../node_modules/swiper/swiper.min';
+
 // Defaults styles.
 @import 'components/fonts';
 @import 'components/vars';
@@ -23,3 +25,7 @@
 @import 'sections/info_section';
 @import 'sections/about_section';
 @import 'sections/products_section';
+@import 'sections/steps_section';
+@import 'sections/certificates_section';
+@import 'sections/testimonials_section';
+@import 'sections/news_section';

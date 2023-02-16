@@ -1,9 +1,23 @@
 .header {
 	padding: 15px $container-padding;
+	background-color: $white;
 	box-shadow: $shadow-box;
+	z-index: 10;
 
 	@media (min-width: $xxl) {
 		padding: 20px 80px
+	}
+
+	&.scrolled {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 5px $container-padding;
+
+		@media (min-width: $xxl) {
+			padding: 5px 80px
+		}
 	}
 
 	&-contacts {
