@@ -55,4 +55,17 @@
 			color: $accent
 		}
 	}
+
+	&.white {
+		border: 1px solid $white;
+		background: transparent;
+
+		&::before {
+			background: $grad-red-reverse
+		}
+
+		&:hover {
+			border-color: transparent
+		}
+	}
 }

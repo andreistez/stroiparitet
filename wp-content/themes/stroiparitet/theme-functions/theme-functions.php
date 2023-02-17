@@ -98,3 +98,14 @@ function sp_get_stars_rating( int $stars_count = 5 ): string
 		) . '</div>';
 }
 
+add_action( 'template_redirect', 'sp_redirect_to_homepage' );
+/**
+ * @return void
+ */
+function sp_redirect_to_homepage(): void
+{
+	$homepage_id = get_option( 'page_on_front' );
+
+	if( ! is_page( $homepage_id ) ) wp_redirect( home_url( 'index.php?page_id=' . $homepage_id ) );
+}
+
