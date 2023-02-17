@@ -51,6 +51,14 @@ $sections = carbon_get_the_post_meta( 'page_sections' );
 					get_template_part( 'template-parts/sections/news_section/news_section', null, [ 'section' => $section ] );
 					break;
 
+				case 'laboratory_section':
+					get_template_part( 'template-parts/sections/laboratory_section/laboratory_section', null, [ 'section' => $section ] );
+					break;
+
+				case 'contacts_section':
+					get_template_part( 'template-parts/sections/contacts_section/contacts_section', null, [ 'section' => $section ] );
+					break;
+
 				default:
 					esc_html_e( 'Шаблон секции не найден.', THEME_NAME );
 			}

@@ -109,5 +109,27 @@ Container::make( 'post_meta', __( 'Поля контента', THEME_NAME ) )
 			->add_fields( 'news_section', __( 'Новости', THEME_NAME ), [
 				Field::make( 'text', 'title', __( 'Заголовок', THEME_NAME ) )
 			] )
+
+			// Laboratory section.
+			->add_fields( 'laboratory_section', __( 'Лаборатория', THEME_NAME ), [
+				Field::make( 'text', 'title', __( 'Заголовок', THEME_NAME ) )
+					->set_width( 50 ),
+				Field::make( 'textarea', 'text', __( 'Текст', THEME_NAME ) )
+					->set_width( 50 ),
+				Field::make( 'image', 'image', __( 'Изображение', THEME_NAME ) )
+					->set_width( 50 ),
+				Field::make( 'checkbox', 'text_first', __( 'Сначала текст', THEME_NAME ) )
+					->set_width( 50 )
+			] )
+
+			// Contacts section.
+			->add_fields( 'contacts_section', __( 'Контакты', THEME_NAME ), [
+				Field::make( 'text', 'title', __( 'Заголовок', THEME_NAME ) )
+					->set_width( 34 ),
+				Field::make( 'rich_text', 'text', __( 'Текст', THEME_NAME ) )
+					->set_width( 33 ),
+				Field::make( 'text', 'map', __( 'Карта (iframe)', THEME_NAME ) )
+					->set_width( 33 )
+			] )
 	] );
 
