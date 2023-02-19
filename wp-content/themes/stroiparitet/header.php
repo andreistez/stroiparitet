@@ -42,6 +42,11 @@
 	<?php wp_body_open() ?>
 
 	<div class="wrapper">
-		<header class="header">
+		<header class="header display-flex flex-wrap align-center">
+			<?php
+			get_template_part( 'template-parts/header/logo' );
+			get_template_part( 'template-parts/header/menu' );
+			get_template_part( 'template-parts/header/contacts' );
+			?>
 		</header>
 

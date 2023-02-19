@@ -1,0 +1,168 @@
+.testimonials {
+	padding: 40px 0;
+
+	@media (min-width: $lg) {
+		padding: 75px 0
+	}
+
+	&-pagination {
+		@media (min-width: $md) {
+			justify-content: flex-start;
+			width: 75%;
+			margin-top: 30px;
+			margin-left: 25%
+		}
+
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 5px;
+			border-radius: 2px;
+			transition:
+				width ease-out $tr,
+				background-color ease-out $tr;
+
+			@media (min-width: $md) {
+				width: 22px
+			}
+
+			&.swiper-pagination-bullet-active {
+				width: 35px;
+
+				@media (min-width: $md) {
+					width: 44px
+				}
+			}
+		}
+	}
+}
+
+.testimonial {
+	background-color: $dark;
+	color: $white;
+	overflow: hidden;
+
+	&-left {
+		position: relative;
+		width: 100%;
+		padding: 20px 25px 30px;
+		border: 2px solid $accent;
+		border-right: none;
+
+		@media (min-width: $md) {
+			width: 50%
+		}
+
+		@media (min-width: $lg) {
+			padding: 40px 45px 50px
+		}
+	}
+
+	&-quotes {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 200px;
+
+		svg {
+			width: 100%;
+			height: auto
+		}
+	}
+
+	&-author {
+		width: 100%;
+		margin-bottom: 10px;
+
+		@media (min-width: $md) {
+			flex-direction: row;
+			align-items: center
+		}
+
+		img {
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			margin-bottom: 10px;
+
+			@media (min-width: $md) {
+				margin-bottom: 0
+			}
+		}
+
+		&-info {
+			width: 100%;
+
+			@media (min-width: $md) {
+				width: calc(100% - 120px);
+				padding-left: 24px
+			}
+		}
+
+		&-name {
+			font-size: $fs-xl;
+			font-weight: $fw-bold
+		}
+
+		&-position {
+			margin-bottom: 10px
+		}
+	}
+
+	&-text {
+		@media (min-width: $lg) {
+			padding-right: 10%
+		}
+	}
+
+	&-right {
+		position: relative;
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+
+		@media (min-width: $sm) {
+			height: 300px
+		}
+
+		@media (min-width: $md) {
+			width: 50%;
+			height: auto
+		}
+
+		&::after {
+			display: none;
+
+			@media (min-width: $md) {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 100%;
+				width: 200px;
+				height: calc(100% - 4px);
+				transform: skewX(-20deg);
+				background-color: $dark;
+				border: 2px solid $accent;
+				transform-origin: 100% 100%;
+				box-shadow: 0 0 0 8px $white
+			}
+		}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover
+		}
+	}
+}
+
+.stars-rating {
+	svg {
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0
+		}
+	}
+}

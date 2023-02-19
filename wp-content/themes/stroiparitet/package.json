@@ -39,8 +39,10 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@critick/astimer": "^1.0.3",
+    "@wordpress/html-entities": "^3.27.0",
     "body-scroll-lock": "^3.1.5",
-    "swiper": "^9.0.4"
+    "swiper": "^8.4.6"
   },
   "babel": {
     "presets": [

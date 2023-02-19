@@ -3,20 +3,20 @@ $xs	: 375px;
 $sm	: 480px;
 $md	: 768px;
 $lg	: 992px;
-$xl	: 1200px;
-$xxl: 1366px;
+$lg2: 1180px;
+$xl	: 1366px;
+$xxl: 1550px;
 
 // Container max-width.
 $container-md: 760px;
 $container-lg: 990px;
-$container-xl: 1200px;
+$container-xl: 1344px;
 
 // Container padding.
 $container-padding: 24px;
 
 // Font families.
-$ff         : Arial, sans-serif;
-$ff-title   : Arial, sans-serif;
+$ff: 'Times New Roman', Arial, sans-serif;
 
 // Font sizes.
 $fs-xs	: 12px;
@@ -26,19 +26,35 @@ $fs-lg	: 18px;
 $fs-xl	: 20px;
 
 // Font weights.
-$fw-light	: 300;
 $fw-regular	: 400;
-$fw-medium	: 500;
 $fw-semibold: 600;
 $fw-bold	: 700;
 
 // Line heights.
 $lh			: 1.5;
-$lh-title	: 1.3;
+$lh-title	: 1.2;
 
 // Colors.
-$white	: #FFFFFF;
-$black	: #000000;
+$white		: #FFFFFF;
+$black		: #121212;
+$dark		: #323232;
+$gray		: #717171;
+$light		: #DDDDDD;
+$accent		: #7C6AFA;
+$accent-alt	: #DF5950;
+$success	: #71cc33;
+$error		: #ff3e3e;
+
+// Gradients.
+$grad-violet		: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+$grad-violet-reverse: linear-gradient(94.26deg, #7C6AFA 9.51%, #C89AFC 90.23%);
+$grad-red			: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+$grad-red-reverse	: linear-gradient(94.78deg, #451046 11.19%, #DF5950 93.72%);
+
+// Shadows.
+$shadow-title	: rgba(0, 0, 0, 0.05) 1px 0 10px;
+$shadow-box		: 0 0 10px 10px rgba(0, 0, 0, 0.05);
 
 // Others.
 $tr: 0.35s;
+$rad: 50px;

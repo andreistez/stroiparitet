@@ -1,8 +1,13 @@
+@import '../../node_modules/swiper/swiper.min';
+
 // Defaults styles.
 @import 'components/fonts';
 @import 'components/vars';
+@import 'components/helpers';
 @import 'components/typography';
 @import 'components/grid';
+@import 'components/buttons';
+@import 'components/forms';
 
 // Theme base styles.
 @import 'components/base';
@@ -13,7 +18,16 @@
 
 // Footer styles.
 @import 'footer/footer';
-@import 'footer/menu';
+@import 'footer/modal';
 
-// Other styles. Please headline each group of your custom styles, for example:
-// ACF Flexible content styles.
+// Sections.
+@import 'sections/hero_section';
+@import 'sections/info_section';
+@import 'sections/about_section';
+@import 'sections/products_section';
+@import 'sections/steps_section';
+@import 'sections/certificates_section';
+@import 'sections/testimonials_section';
+@import 'sections/news_section';
+@import 'sections/contacts_section';
+@import 'sections/laboratory_section';

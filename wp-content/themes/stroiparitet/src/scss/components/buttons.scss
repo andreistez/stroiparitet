@@ -1,0 +1,71 @@
+.btn {
+	position: relative;
+	min-height: 46px;
+	color: $white;
+	border-radius: $rad;
+	background: $grad-violet;
+	border: none;
+	padding: 10px 30px;
+	margin: 0;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 0;
+
+	@media (min-width: $xl) {
+		font-size: $fs-md
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $grad-violet-reverse;
+		opacity: 0;
+		transition: opacity ease-out $tr;
+		z-index: -1
+	}
+
+	&:hover::before {
+		opacity: 1
+	}
+
+	&.red {
+		background: $grad-red;
+
+		&::before {
+			background: $grad-red-reverse
+		}
+	}
+
+	&.no-bg {
+		min-height: auto;
+		background: transparent;
+		padding: 0;
+		color: $accent-alt;
+		transition: color ease-out $tr;
+
+		&::before {
+			display: none
+		}
+
+		&:hover {
+			color: $accent
+		}
+	}
+
+	&.white {
+		border: 1px solid $white;
+		background: transparent;
+
+		&::before {
+			background: $grad-red-reverse
+		}
+
+		&:hover {
+			border-color: transparent
+		}
+	}
+}

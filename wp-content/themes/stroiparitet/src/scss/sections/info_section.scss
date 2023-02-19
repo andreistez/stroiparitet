@@ -1,0 +1,36 @@
+.info-inner {
+	padding: 10px 0;
+
+	@media (min-width: $md) {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 20px 0
+	}
+}
+
+.info-item {
+	&:not(:last-child) {
+		margin-bottom: 10px;
+
+		@media (min-width: $md) {
+			margin-bottom: 0
+		}
+	}
+
+	&-text {
+		width: calc(100% - 60px);
+		padding-left: 20px
+	}
+
+	img {
+		width: 60px
+	}
+
+	h3 {
+		margin: 0
+	}
+
+	p {
+		color: $gray
+	}
+}

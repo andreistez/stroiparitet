@@ -1,0 +1,35 @@
+.swiper-pagination-bullets {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 10px
+}
+
+.swiper-pagination-bullet {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: $gray;
+	margin: 0 5px;
+	transition: opacity ease-out $tr;
+	cursor: pointer;
+
+	&.swiper-pagination-bullet-active {
+		background-color: $accent;
+		opacity: 0.7
+	}
+}
+
+.certificates {
+	padding: 40px 0;
+
+	@media (min-width: $lg) {
+		padding: 75px 0
+	}
+}
+
+.certificate {
+	display: flex;
+	justify-content: center
+}

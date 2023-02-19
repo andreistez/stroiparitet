@@ -1,0 +1,60 @@
+.laboratory {
+	padding: 40px 0;
+
+	@media (min-width: $lg) {
+		padding: 75px 0
+	}
+
+	&.reverse {
+		.laboratory {
+			&-inner {
+				@media (min-width: $md) {
+					flex-direction: row-reverse
+				}
+			}
+
+			&-text {
+				@media (min-width: $md) {
+					padding: 0 40px 0 0
+				}
+			}
+		}
+	}
+
+	&-image {
+		width: 100%;
+		margin-bottom: 30px;
+
+		@media (min-width: $md) {
+			width: 300px;
+			margin-bottom: 0
+		}
+
+		@media (min-width: $lg) {
+			width: 500px
+		}
+
+		img {
+			width: 100%;
+			height: auto
+		}
+	}
+
+	&-text {
+		width: 100%;
+		font-size: $fs-lg;
+
+		@media (min-width: $md) {
+			width: calc(100% - 300px);
+			padding-left: 40px
+		}
+
+		@media (min-width: $lg) {
+			width: calc(100% - 500px)
+		}
+
+		.btn {
+			margin-top: 30px
+		}
+	}
+}

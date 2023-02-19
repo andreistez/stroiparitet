@@ -1,1 +1,169 @@
-// Header menu styles.
+.header-menu {
+	margin-left: auto;
+
+	@media (min-width: $lg2) {
+		margin-left: 30px
+	}
+
+	&-inner {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 104px 0;
+		background-color: $white;
+		overflow-y: auto;
+		z-index: 1;
+
+		@media (min-width: $lg2) {
+			display: flex;
+			position: relative;
+			top: auto;
+			left: auto;
+			width: auto;
+			height: auto;
+			padding: 0;
+			background-color: transparent;
+			overflow-y: visible
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 104px;
+			background-color: $white;
+
+			@media (min-width: $lg2) {
+				display: none
+			}
+		}
+
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width: $lg2) {
+		flex-direction: row;
+		flex-wrap: wrap
+	}
+
+	&-item {
+		padding: 20px;
+
+		@media (min-width: $lg2) {
+			padding: 0;
+			margin: 0 12px 0 0
+		}
+
+		@media (min-width: $xxl) {
+			margin-right: 25px
+		}
+
+		a {
+			font-size: $fs-lg;
+			font-weight: $fw-bold;
+			color: $black;
+			transition: opacity ease-out $tr;
+
+			@media (min-width: $lg2) {
+				font-size: $fs-sm;
+				font-weight: $fw-regular
+			}
+
+			@media (min-width: $xl) {
+				font-size: $fs-md
+			}
+
+			&:hover {
+				opacity: 0.7
+			}
+		}
+	}
+}
+
+.menu-btn {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+
+	@media (min-width: $lg2) {
+		display: none
+	}
+
+	&-line {
+		display: block;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 30px;
+		height: 2px;
+		background-color: $black;
+		transition:
+			opacity ease-out $tr,
+			transform ease-out $tr;
+
+		&.top {
+			top: 10px
+		}
+
+		&.bottom {
+			top: 30px
+		}
+	}
+}
+
+.header.active {
+	background-color: $white;
+
+	&.scrolled {
+		.header-menu-inner {
+			padding-top: 60px;
+
+			@media (min-width: $lg2) {
+				padding-top: 0
+			}
+
+			&::after {
+				height: 60px
+			}
+		}
+	}
+
+	.menu-btn-line {
+		top: 50%;
+
+		&.top {
+			transform: translateX(-50%) rotate(45deg)
+		}
+
+		&.center {
+			opacity: 0
+		}
+
+		&.bottom {
+			transform: translateX(-50%) rotate(-45deg)
+		}
+	}
+
+	.header-menu-inner {
+		display: flex
+	}
+}
