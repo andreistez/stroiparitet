@@ -122,7 +122,7 @@ class Block_Container extends Container {
 	 * {@inheritDoc}
 	 */
 	public function attach() {
-		add_filter( 'block_categories', array( $this, 'attach_block_category' ), 10, 2 );
+		add_filter( 'block_categories_all', array( $this, 'attach_block_category' ), 10, 2 );
 
 		$this->register_block();
 	}
@@ -212,8 +212,8 @@ class Block_Container extends Container {
 	 * @return Block_Container
 	 */
 	protected function set_style_handle( $key, $handle ) {
-		if ( ! wp_style_is( $handle ) ) {
-			throw new \Exception( __( "Style '$handle' is not enqueued.", 'crb' ) );
+		if ( ! wp_style_is( $handle, 'registered' ) ) {
+			throw new \Exception( __( "Style '$handle' is not registered.", 'crb' ) );
 		}
 
 		$this->settings[ $key ] = $handle;

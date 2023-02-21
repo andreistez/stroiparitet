@@ -1,17 +1,17 @@
 [
     {
         "name": "composer/installers",
-        "version": "v1.11.0",
-        "version_normalized": "1.11.0.0",
+        "version": "v1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/installers.git",
-            "reference": "ae03311f45dfe194412081526be2e003960df74b"
+            "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/installers/zipball/ae03311f45dfe194412081526be2e003960df74b",
-            "reference": "ae03311f45dfe194412081526be2e003960df74b",
+            "url": "https://api.github.com/repos/composer/installers/zipball/d20a64ed3c94748397ff5973488761b22f6d3f19",
+            "reference": "d20a64ed3c94748397ff5973488761b22f6d3f19",
             "shasum": ""
         },
         "require": {
@@ -29,7 +29,7 @@
             "symfony/phpunit-bridge": "^4.2 || ^5",
             "symfony/process": "^2.3"
         },
-        "time": "2021-04-28 06:42:17",
+        "time": "2021-09-13T08:19:44+00:00",
         "type": "composer-plugin",
         "extra": {
             "class": "Composer\\Installers\\Plugin",
@@ -112,6 +112,7 @@
             "modx",
             "moodle",
             "osclass",
+            "pantheon",
             "phpbb",
             "piwik",
             "ppi",
@@ -131,31 +132,46 @@
             "yawik",
             "zend",
             "zikula"
+        ],
+        "funding": [
+            {
+                "url": "https://packagist.com",
+                "type": "custom"
+            },
+            {
+                "url": "https://github.com/composer",
+                "type": "github"
+            },
+            {
+                "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                "type": "tidelift"
+            }
         ]
     },
     {
         "name": "htmlburger/carbon-fields",
-        "version": "v3.3.2",
-        "version_normalized": "3.3.2.0",
+        "version": "v3.5.0",
+        "version_normalized": "3.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/htmlburger/carbon-fields.git",
-            "reference": "dd5663e14c6db365323b688dbae1cfbeaf14bee7"
+            "reference": "25e1486b5245d9fcc65818021c4e90437f5ad443"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/dd5663e14c6db365323b688dbae1cfbeaf14bee7",
-            "reference": "dd5663e14c6db365323b688dbae1cfbeaf14bee7",
+            "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/25e1486b5245d9fcc65818021c4e90437f5ad443",
+            "reference": "25e1486b5245d9fcc65818021c4e90437f5ad443",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.3"
+            "php": ">=5.6.20"
         },
         "require-dev": {
-            "mockery/mockery": "^0.9.7",
-            "phpunit/phpunit": "~4.8"
+            "mockery/mockery": "1.3.6",
+            "phpunit/phpunit": "7.5.20|9.6.3",
+            "yoast/phpunit-polyfills": "^1.0"
         },
-        "time": "2021-04-22 13:24:34",
+        "time": "2023-02-20T08:12:43+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
